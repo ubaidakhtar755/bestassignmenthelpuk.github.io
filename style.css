@@ -1,0 +1,2496 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --clr-bg-header: #3D8361;
+  --clr-btn: #3D8361;
+  --clr-dropdown: #1C6758;
+  --clr-nav-hover: #1E6F5C;
+  --clr-dropdown-hov: #289672;
+  --clr-dropdown-link-hov: #29BB89;
+  --clr-light: #FAFAFA;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  background-color: var(--clr-bg-header);
+  width: 100%;
+  z-index: 1000;
+}
+
+section {
+  position: relative;
+  /* height: calc(100vh - 3rem); */
+  width: 100%;
+  background: none;
+  /* overflow: hidden; */
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(30, 130, 95, 0.5);
+}
+
+.container {
+  width: 100%;
+  padding: 0 0;
+  padding-left: 136px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  flex: 6;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  flex: 2;
+}
+
+.log-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 14px;
+}
+
+.logo {
+  color: var(--clr-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: .8rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px !IMPORTANT;
+  line-height: 1;
+  margin: 0 .2rem;
+  transition: .3s;
+  text-transform: uppercase;
+}
+
+.btn.solid,
+.btn.transparent:hover {
+  background-color: darkblue;
+  color: #ffffff;
+  border: 2px solid darkblue;
+
+}
+
+.btn.solid:hover {
+  transform: scale(1.05);
+}
+
+.btn.transparent:hover {
+  transform: scale(1.05);
+}
+
+.btn.transparent,
+.btn.solid:hover {
+  background-color: #134000;
+  color: var(--clr-light);
+  border: 2px solid #134000;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+}
+
+.nav-links>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link>a {
+  line-height: 3rem;
+  color: var(--clr-light);
+  padding: 0 .8rem;
+  letter-spacing: 1px;
+  font-size: .95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .5s;
+  margin-right: 5px;
+}
+
+.nav-link>a>i {
+  margin-left: .2rem;
+}
+
+.nav-link:hover>a {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 10rem;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.dropdown ul {
+  position: relative;
+}
+
+.dropdown-link>a {
+  display: flex;
+  background-color: var(--clr-light);
+  color: var(--clr-dropdown);
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s;
+}
+
+.dropdown-link:hover>a {
+  background-color: var(--clr-dropdown);
+  color: var(--clr-light);
+}
+
+.dropdown-link:not(:nth-last-child(2)) {
+  border-bottom: 1px solid var(--clr-light);
+}
+
+.dropdown-link i {
+  transform: rotate(-90deg);
+}
+
+.arrow {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: -5.5px;
+  left: 32px;
+  background-color: var(--clr-light);
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: .3s;
+  z-index: -1;
+}
+
+.dropdown-link:first-child:hover~.arrow {
+  background-color: var(--clr-dropdown);
+}
+
+.dropdown-link {
+  position: relative;
+}
+
+.dropdown.second {
+  top: 0;
+  left: 100%;
+  padding-left: .8rem;
+  cursor: pointer;
+  transform: translateX(10px);
+}
+
+.dropdown.second .arrow {
+  top: 10px;
+  left: -5.5px;
+}
+
+.nav-link:hover>.dropdown,
+.dropdown-link:hover>.dropdown {
+  transform: translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-menu-container {
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu div {
+  width: 1.6rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--clr-light);
+  position: relative;
+  z-index: 1001;
+  transition: .5s;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: var(--clr-light);
+  border-radius: 3px;
+  transition: .5s;
+}
+
+.hamburger-menu div:before {
+  transform: translateY(-7px);
+}
+
+.hamburger-menu div:after {
+  transform: translateY(7px);
+}
+
+#check {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 90000;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+}
+
+#check:checked~.hamburger-menu-container .hamburger-menu div {
+  background-color: transparent;
+}
+
+#check:checked~.hamburger-menu-container .hamburger-menu div:before {
+  transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked~.hamburger-menu-container .hamburger-menu div:after {
+  transform: translateY(0) rotate(45deg);
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hamburger-menu-container {
+    display: flex;
+  }
+
+  #check {
+    display: block;
+  }
+
+  .nav-btn {
+    position: fixed;
+    height: calc(100vh - 3rem);
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-btn);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: .65s;
+  }
+
+  #check:checked~.nav-btn {
+    transform: translateX(0);
+  }
+
+  #check:checked~.nav-btn .nav-link,
+  #check:checked~.nav-btn .log-sign {
+    animation: animation .5s ease forwards var(--i);
+  }
+
+  .nav-links {
+    flex: initial;
+    width: 100%;
+  }
+
+  .nav-links>ul {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  .nav-link>a {
+    line-height: 1;
+    padding: 1.6rem 2rem;
+  }
+
+  .nav-link:hover>a {
+    transform: scale(1);
+    background-color: var(--clr-nav-hover);
+  }
+
+  .dropdown,
+  .dropdown.second {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    background-color: var(--clr-dropdown-hov);
+    display: none;
+  }
+
+  .nav-link:hover>.dropdown,
+  .dropdown-link:hover>.dropdown {
+    display: block;
+  }
+
+  .nav-link:hover>a>i,
+  .dropdown-link:hover>a>i {
+    transform: rotate(360deg);
+  }
+
+  .dropdown-link>a {
+    background-color: transparent;
+    color: var(--clr-light);
+    padding: 1.2rem 2rem;
+    line-height: 1;
+  }
+
+  .dropdown.second .dropdown-link>a {
+    padding: 1.2rem 2rem 1.2rem 3rem;
+  }
+
+  .dropdown.second .dropdown.second .dropdown-link>a {
+    padding: 1.2rem 2rem 1.2rem 4rem;
+  }
+
+  .dropdown-link:not(:nth-last-child(2)) {
+    border-bottom: none;
+  }
+
+  .arrow {
+    z-index: 1;
+    background-color: var(--clr-btn);
+    left: 10%;
+    transform: scale(1.1) rotate(45deg);
+    transition: .5s;
+  }
+
+  .nav-link:hover .arrow {
+    background-color: var(--clr-nav-hover);
+  }
+
+  .dropdown .dropdown .arrow {
+    display: none;
+  }
+
+  .dropdown-link:hover>a {
+    background-color: var(--clr-dropdown-link-hov);
+  }
+
+  .dropdown-link:first-child:hover~.arrow {
+    background-color: var(--clr-nav-hover);
+  }
+
+  .nav-link>a>i {
+    font-size: 1.1rem;
+    transform: rotate(-90deg);
+    transition: .7s;
+  }
+
+  .dropdown i {
+    font-size: 1rem;
+    transition: .7s;
+  }
+
+  .log-sign {
+    flex: initial;
+    width: 100%;
+    padding: 1.5rem 1.9rem;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+@media (max-width: 920px) {
+  .hamburger-menu-container {
+    display: flex;
+  }
+
+  #check {
+    display: block;
+  }
+
+  .nav-btn {
+    position: fixed;
+    height: calc(100vh - 3rem);
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-btn);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: .65s;
+  }
+
+  #check:checked~.nav-btn {
+    transform: translateX(0);
+  }
+
+  #check:checked~.nav-btn .nav-link,
+  #check:checked~.nav-btn .log-sign {
+    animation: animation .5s ease forwards var(--i);
+  }
+
+  .nav-links {
+    flex: initial;
+    width: 100%;
+  }
+
+  .nav-links>ul {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  .nav-link>a {
+    line-height: 1;
+    padding: 1.6rem 2rem;
+  }
+
+  .nav-link:hover>a {
+    transform: scale(1);
+    background-color: var(--clr-nav-hover);
+  }
+
+  .dropdown,
+  .dropdown.second {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    background-color: var(--clr-dropdown-hov);
+    display: none;
+  }
+
+  .nav-link:hover>.dropdown,
+  .dropdown-link:hover>.dropdown {
+    display: block;
+  }
+
+  .nav-link:hover>a>i,
+  .dropdown-link:hover>a>i {
+    transform: rotate(360deg);
+  }
+
+  .dropdown-link>a {
+    background-color: transparent;
+    color: var(--clr-light);
+    padding: 1.2rem 2rem;
+    line-height: 1;
+  }
+
+  .dropdown.second .dropdown-link>a {
+    padding: 1.2rem 2rem 1.2rem 3rem;
+  }
+
+  .dropdown.second .dropdown.second .dropdown-link>a {
+    padding: 1.2rem 2rem 1.2rem 4rem;
+  }
+
+  .dropdown-link:not(:nth-last-child(2)) {
+    border-bottom: none;
+  }
+
+  .arrow {
+    z-index: 1;
+    background-color: var(--clr-btn);
+    left: 10%;
+    transform: scale(1.1) rotate(45deg);
+    transition: .5s;
+  }
+
+  .nav-link:hover .arrow {
+    background-color: var(--clr-nav-hover);
+  }
+
+  .dropdown .dropdown .arrow {
+    display: none;
+  }
+
+  .dropdown-link:hover>a {
+    background-color: var(--clr-dropdown-link-hov);
+  }
+
+  .dropdown-link:first-child:hover~.arrow {
+    background-color: var(--clr-nav-hover);
+  }
+
+  .nav-link>a>i {
+    font-size: 1.1rem;
+    transform: rotate(-90deg);
+    transition: .7s;
+  }
+
+  .dropdown i {
+    font-size: 1rem;
+    transition: .7s;
+  }
+
+  .log-sign {
+    flex: initial;
+    width: 100%;
+    padding: 1.5rem 1.9rem;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+.nav-links ul li img {
+  width: 18%;
+  margin-left: 10px;
+}
+
+.nav-links ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#number-padding {
+  padding: 0px !important;
+  padding-left: 7px !important;
+}
+
+#number-padding:hover {
+  transform: scale(1);
+}
+
+#main-header-after-nav-bar {
+  background-image: url("image/main-bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-header-after-nav-bar-main-box {
+  width: 100%;
+  /* border: 2px solid black; */
+}
+
+.main-header-after-nav-bar-sub-box {
+  width: 90%;
+  /* border: 2px solid purple; */
+  margin: auto;
+}
+
+.main-header-after-nav-bar-content-box {
+  width: 96%;
+  /* border: 2px solid orange; */
+  margin: auto;
+  display: flex;
+}
+
+.main-header-after-nav-bar-content-box-left {
+  width: 45%;
+  /* border: 2px solid brown; */
+}
+
+.main-header-after-nav-bar-content-box-left span {
+  color: darkblue;
+}
+
+.main-header-after-nav-bar-content-box-left-heading-style {
+  font-size: 32px;
+  color: #134000;
+  font-weight: bolder;
+}
+
+.main-header-after-nav-bar-content-box-left p {
+  color: darkblue;
+  margin-top: 10PX;
+}
+
+.main-header-after-nav-bar-content-box-right {
+  width: 55%;
+  /* border: 2px solid rgb(53, 0, 0); */
+  padding-left: 30px;
+}
+
+.main-header-after-nav-bar-content-box-left-icon-main-box {
+  width: 100%;
+  /* border: 2px solid purple; */
+  margin-top: 10px;
+  display: flex;
+}
+
+.main-header-after-nav-bar-content-box-left-icon-main-box-left {
+  width: 50%;
+  /* border: 2px solid  orchid; */
+  display: flex;
+  align-items: center;
+}
+
+.main-header-after-nav-bar-content-box-left-icon-main-box-left p {
+  margin-left: 10px;
+  color: black;
+  margin-top: 1px;
+}
+
+.main-header-after-nav-bar-content-box-left-icon-main-box-left p span {
+  font-weight: bold;
+  margin-right: 5px;
+  color: black;
+}
+
+.main-header-after-nav-bar-content-box-left-icon-main-box-right {
+  width: 50%;
+  /* border: 2px solid  orchid; */
+}
+
+.main-header-after-nav-bar-content-box-left-btn {
+  width: 100%;
+  /* border: 2px solid palegreen; */
+  margin-top: 30px;
+  display: flex;
+}
+
+.main-header-after-nav-bar-content-box-left-btn a {
+  text-decoration: none;
+}
+
+.main-header-after-nav-bar-content-box-left-btn a button {
+  padding: 15px 25px;
+  background-color: #134000;
+  color: white;
+  border: 2px solid #134000;
+  border: none;
+  margin-right: 10PX;
+  border-radius: 5PX;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bolder;
+}
+
+.main-header-after-nav-bar-content-box-left-btn a button:hover {
+  transform: scale(1.05);
+}
+
+#back-ground-color-add {
+  background-color: #134000;
+  /* border: 2px solid #134000; */
+  color: white;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  padding: 10px 25px;
+}
+
+#back-ground-none {
+  background-color: transparent;
+  border: 2px solid darkblue;
+  color: black;
+  padding: 8px 25px;
+  transition: all .4S ease-in-out;
+}
+
+#back-ground-none:hover {
+  background-color: darkblue;
+  border: 2px solid darkblue;
+  color: white;
+}
+
+.form-main-box {
+  width: 47%;
+  border: 2px solid darkgreen;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgb(158, 255, 158);
+}
+
+.form-main-box-headig-style {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.main-header-after-nav-bar-content-box-right select {
+  padding: 7px;
+  width: 100%;
+  border: 2px solid darkblue;
+  border-radius: 5px;
+  outline: darkblue;
+  margin-top: 10px;
+}
+
+.main-header-after-nav-bar-content-box-right-btn {
+  width: 100%;
+  /* border: 2px solid black; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main-header-after-nav-bar-content-box-right-btn a button {
+  width: 150px;
+  padding: 7px;
+  font-size: 16px;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  /* background-color: #134000; */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: all .4s ease-in-out;
+}
+
+.main-header-after-nav-bar-content-box-right-btn a button:hover {
+  transform: scale(1.05);
+}
+
+
+.Hire-essay-our-future-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.Hire-essay-our-future-sub-box {
+  width: 100%;
+  /* border: 2px solid pink; */
+  margin: auto;
+  background-image: url("image/Group\ 130\ \(2\).webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Hire-essay-our-future-sub-box-contet {
+  width: 250px;
+  /* border: 2px solid purple; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+
+.Hire-essay-our-future-sub-box-contet-icon-box {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  /* background-color: #134000; */
+  padding: 10px 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hire-essay-our-future-sub-box-contet-icon-box img {
+  width: 90%;
+  filter: invert(100%);
+}
+
+.Hire-essay-our-future-sub-box-contet-icon-box-heading {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+.Hire-essay-our-future-sub-box-contet p {
+  text-align: center;
+  color: white;
+  margin-top: 0px;
+}
+
+#Utilize-the-about-us {
+  padding-top: 0px;
+}
+
+.Utilize-the-about-us-main-box {
+  width: 97%;
+  /* border: 2px solid black; */
+  margin: auto
+}
+
+.utilize-the-about-us-sub-box {
+  width: 100%;
+  /* border: 2px solid orange; */
+}
+
+.utilize-the-about-us-sub-box-heading-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.utilize-the-about-us-sub-box-heading-box-heading-style {
+  font-size: 40px;
+  font-weight: 900;
+  color: #434644;
+}
+
+.Utilize-the-about-us-main-box-content-box {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+
+.utilize-the-about-us-sub-box-heading-box-left {
+  width: 55%;
+  /* border: 2px solid palegreen; */
+  padding-left: 40px;
+}
+
+.utilize-the-about-us-sub-box-heading-box-right {
+  width: 45%;
+  /* border: 2px solid rgb(0, 68, 0); */
+}
+
+.utilize-the-about-us-sub-box-heading-box-left-heading-style {
+  color: #035181;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.utilize-the-about-us-sub-box-heading-box-left p {
+  margin-top: 10px;
+}
+
+.utilize-the-about-us-sub-box-heading-box-left-icon-with-para-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid black; */
+  margin-top: 10px;
+}
+
+.utilize-the-about-us-sub-box-heading-box-left-icon-with-para-box p {
+  margin-top: 0px;
+  margin-left: 10px;
+
+}
+
+#adjust-padding {
+  margin-top: 15px;
+
+}
+
+.utilize-the-about-us-sub-box-heading-box-left-icon-with-para-box span {
+  font-weight: bolder;
+}
+
+.utilize-the-about-us-sub-box-heading-box-left-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.utilize-the-about-us-sub-box-heading-box-left-btn a {
+  width: 120px;
+  background: #d87500;
+  text-align: center;
+  padding: 10px 10px;
+  /* border: 2px solid #d87500; */
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  color: white;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+}
+
+#btn-edit {
+  background: transparent;
+  border: 2px solid #000A69 ;
+  padding: 8px 20px;
+  color: #000A69;
+  margin-left: 20px;
+}
+
+#btn-edit:hover {
+  background-color: #000A69;
+  color: #ffffff;
+}
+
+.utilize-the-about-us-sub-box-heading-box-left-btn a:hover {
+  transform: scale(1.05);
+}
+
+.utilize-the-about-us-sub-box-heading-box-right img {
+  width: 100%;
+}
+
+/* Hire Essay Our Services */
+#hire-essay-our-services {
+  padding-top: 0px;
+}
+
+.hire-essay-our-services-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.hire-essay-our-services-sub-box {
+  width: 97%;
+  /* border: 2px solid orangered; */
+  margin: auto;
+}
+
+.hire-essay-our-services-sub-box-heading-box {
+  width: 100%;
+  /* border: 2px slid purple; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-essay-our-services-sub-box-heading-style {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.hire-essay-our-services-main-box-content-main-box {
+  width: 95%;
+  /* border: 2px solid pink; */
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.hire-essay-our-services-main-box-content-main-box-sub-box {
+  width: 330px;
+  /* border: 2px solid orangered; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  background-image: url("image/Group\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0px 20px;
+  z-index: 10;
+}
+
+.hire-essay-our-services-main-box-content-main-box-sub-box:hover {
+  transform: scale(0.9);
+}
+
+.hire-essay-our-services-main-box-content-main-box-sub-box img {
+  width: 52px;
+  margin-top: 27px;
+  filter: invert(1);
+}
+
+.hire-essay-our-services-main-box-content-main-box-sub-box-heading-style {
+  margin-top: 10px;
+}
+
+.hire-essay-our-services-main-box-content-main-box-sub-box p {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 36px;
+}
+
+#hire-essay-our-services-main-box-content-main-box-sub-box-heading-style-color-change {
+  color: #ffffff;
+}
+
+.hire-essay-our-services-main-box-content-main-box-sub-box-heading-style-color-change-para {
+  color: rgb(255, 255, 255);
+}
+
+#hire-essay-our-services-main-box-content-main-box-sub-box-bg-add {
+  background-image: url("image/Group\ 2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#no-filter-add {
+  filter: invert(0);
+}
+
+#image-postion-absulote {
+  position: absolute;
+  left: 269px;
+  bottom: -26px;
+  z-index: 0;
+}
+
+#hire-essay-our-services-main-box-content-main-box-margin-add-bottom-40px {
+  margin-bottom: 40px;
+}
+
+/* Hire Essay Our Services */
+
+#essay-writing-priced-essay-writer {
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  overflow: hidden;
+  position: relative;
+  padding: 0px 0px;
+}
+
+#essay-writing-priced-essay-writer-image-position-change {
+  position: absolute;
+  right: -170px;
+  top: 1px;
+  width: 1881px;
+}
+
+.essay-writing-priced-essay-writer-main-box {
+  width: 90%;
+  /* border: 2px solid orange; */
+  margin: auto;
+}
+
+.essay-writing-priced-essay-writer-sub-box {
+  width: 97%;
+  /* border: 2px solid black; */
+  margin: auto;
+  display: flex;
+}
+
+.essay-writing-priced-essay-writer-sub-box-left-box {
+  width: 50%;
+  /* border: 2px solid palevioletred; */
+  padding: 15px 0;
+}
+
+.essay-writing-priced-essay-writer-sub-box-right-box {
+  width: 50%;
+  /* border: 2px solid rgb(131, 4, 46); */
+}
+
+.essay-writing-priced-essay-writer-sub-box-left-box-heading-style {
+  font-size: 27px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.essay-writing-priced-essay-writer-sub-box-left-box p {
+  color: white;
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-main-box {
+  width: 97%;
+  /* border: 2px solid orangered; */
+  margin: auto;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box{
+  width: 300px;
+  background-color: #000A69;
+  position: absolute;
+  padding: 10px 5px;
+  top: 0px;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para{
+  width: 100%;
+  display: flex;
+  margin-top: 9px;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-icon-box{
+  width: 50px;
+  /* border: 2px solid peru; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-para-box{
+  width: 300px;
+  /* border: 2px solid olivedrab; */
+  padding-left: 6px;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-para-box p{
+  margin-bottom: 0px;
+  color: white;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-para-box-h3-heading-style{
+  margin-bottom: 0px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-icon-box i{
+  font-size: 40px;
+  color: white;
+}
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box {
+  width: 80%;
+  /* border: 2px solid rgb(99, 26, 0); */
+  margin: auto;
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-heading-box {
+  width: 100%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-heading-box-heading-style {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  color: #434644;
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-left-heading-style {
+  margin-top: 10px;
+
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-content-box {
+  width: 100%;
+  display: flex;
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-left {
+  width: 50%;
+  /* border: 2px solid rebeccapurple; */
+  padding: 0px 10px;
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-right {
+  width: 50%;
+  /* border: 2px solid rgb(46, 3, 88); */
+  padding: 0px 10px;
+
+}
+
+.Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-right p {
+  margin-top: 10px;
+}
+
+div#adjust-padding p {
+  margin-top: 0px;
+}
+
+#simple-quick-order-process-to-unlock-success {
+  background-color: #F7F8FD;
+}
+
+#simple-quick-order-process-to-unlock-success {
+  position: relative;
+}
+
+.simple-quick-order-process-to-unlock-success-heading-box {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.simple-quick-order-process-to-unlock-success-heading-box-heading-style {
+  font-size: 40px;
+  font-weight: 900;
+  color: #434644;
+}
+
+.simple-quick-order-process-to-unlock-success-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+  margin-top: 30px;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box {
+  width: 97%;
+  /* border: 2px solid rgb(116, 0, 0); */
+  margin: auto;
+  display: flex;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-left {
+  width: 50%;
+  /* border: 2px solid orangered; */
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right {
+  width: 50%;
+  /* border: 2px solid rgb(156, 42, 0); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-left-heading-style {
+  font-size: 27px;
+  color: #045281;
+  margin-bottom: 15px;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-left a button {
+  width: 110px;
+  text-align: center;
+  padding: 10px 10px;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  color: white;
+  border: none;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-left a button:hover {
+  transform: scale(1.05);
+}
+
+#prossising-image {
+  width: 650px;
+  position: absolute;
+  right: -40px;
+  top: 165px;
+  /* display: none; */
+  z-index: 0;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para {
+  width: 100%;
+  /* border: 2px solid rgb(159, 245, 0); */
+  z-index: 100;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section {
+  width: 100%;
+  /* border: 2px solid olivedrab; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section-icon-box {
+  width: 230px;
+  /* border: 2px solid orchid; */
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20PX;
+  flex-direction: column;
+  padding: 10px 10px !important;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section-icon-box:hover {
+  transform: scale(1.05);
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section-icon-box img {
+  width: 70px;
+  filter: invert(100);
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section-icon-box-h3-heading-style {
+  color: white;
+  margin-top: 10px;
+  font-size: 23px;
+}
+
+.simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section-icon-box p {
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+/* counter  */
+.counter-main-box {
+  width: 97%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.counter-sub-box {
+  width: 90%;
+  /* border: 2px solid orange; */
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.couter-cotent-box {
+  width: 200px;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.couter-cotent-box-number-style {
+  font-size: 40px;
+  color: #434644;
+}
+
+.couter-cotent-box p {
+  color: #434644;
+  font-size: 20px;
+}
+
+/* counter  */
+
+#reasonably-pricing-essay-writer {
+  background-image: url("image/Reasonabl-ricing-essay-writer\ -background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.reasonably-pricing-essay-writer-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+
+}
+
+.reasonably-pricing-essay-writer-sub-box {
+  width: 97%;
+  /* border: 2px solid orange; */
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#book-and-pen-png {
+  position: absolute;
+  left: -62px;
+  bottom: 0;
+  width: 210px;
+}
+
+#book-and-watch-png {
+  position: absolute;
+  right: -45px;
+  bottom: 0;
+  width: 250px;
+}
+
+.reasonably-pricing-essay-writer-sub-box-pricing-section {
+  width: 240px;
+  background-image: url("image/Reasonably-Pricing-essay-writer-box.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 0 0px; */
+  padding-right: 10px;
+}
+
+.reasonably-pricing-essay-writer-sub-box-pricing-section p {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h4.reasonably-pricing-essay-writer-sub-box-pricing-section-h4-heading-style {
+  margin-top: 20px;
+  font-size: 40px;
+  color: #00247D;
+}
+
+h3.reasonably-pricing-essay-writer-sub-box-pricing-section-heading-style {
+  margin-top: 70px;
+  font-size: 21px;
+}
+
+.reasonably-pricing-essay-writer-sub-box-pricing-section-btn {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.reasonably-pricing-essay-writer-sub-box-pricing-section-btn a {
+  width: 100px;
+  text-align: center;
+  padding: 10px 10px;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  color: white;
+  border: none;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.reasonably-pricing-essay-writer-sub-box-pricing-section-btn a:hover {
+  transform: scale(1.1);
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box-main-heading-box {
+  width: 80%;
+  /* border: 2px solid orangered; */
+  margin: auto;
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box-main-heading-box-heading-style {
+  font-size: 40px;
+  text-align: center;
+  color: #434644;
+  margin-bottom: 10px;
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box-main-heading-box p {
+  text-align: center;
+  color: #434644;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box {
+  width: 97%;
+  /* border: 2px solid palevioletred; */
+  margin: auto;
+  display: flex;
+  margin-top: 30px
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left {
+  width: 50%;
+  /* border: 2px solid green; */
+  position: relative;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-h3-heading-style {
+  color: #00247D;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-h2-heading-style {
+  color: #434644;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left img {
+  position: absolute;
+  right: 50px;
+  bottom: -4px;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left a button {
+  width: 110px;
+  text-align: center;
+  padding: 10px 10px;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  color: white;
+  border: none;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left a button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px gray;
+}
+
+.simple-quick-our-writers-o-unlock-success-sub-box-right {
+  width: 50%;
+  /* border: 2px solid rgb(6, 250, 6); */
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box-main-heading-box {
+  width: 80%;
+  /* border: 2px solid orangered; */
+  margin: auto;
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box-main-heading-box-heading-style {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 900;
+  color: #434644;
+  margin-bottom: 10px;
+}
+
+.simple-quick-our-writers-to-unlock-success-main-box-main-heading-box p {
+  text-align: center;
+  color: #434644;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box {
+  width: 97%;
+  /* border: 2px solid palevioletred; */
+  margin: auto;
+  display: flex;
+  margin-top: 30px
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left {
+  width: 50%;
+  /* border: 2px solid green; */
+  position: relative;
+  padding-top: 50px;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-h3-heading-style {
+  color: #00247D;
+  font-weight: 900;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-h2-heading-style {
+  color: #434644;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left img {
+  position: absolute;
+  right: 50px;
+  bottom: -4px;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left a button {
+  width: 110px;
+  text-align: center;
+  padding: 10px 10px;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  color: white;
+  border: none;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-left a button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px gray;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-right {
+  width: 50%;
+  /* border: 2px solid rgb(6, 51, 250); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-right-main-writer-images {
+  width: 70%;
+  /* border: 2px solid gold; */
+  position: relative;
+}
+
+#rotate-image {
+  width: 100%;
+  animation: animate 20s linear infinite;
+}
+
+.simple-quick-our-writers-to-unlock-success-sub-box-right-heading-style {
+  position: absolute;
+  text-align: center;
+  top: 153px;
+  left: 148px;
+  color: white;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(800deg);
+  }
+}
+
+#testimonial {
+  background: url("image/testimonial.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testimonial-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.testimonial-sub-box {
+  width: 70%;
+  /* border: 2px solid purple; */
+  margin: auto;
+}
+
+.testimonial-sub-box-main-heading-box {
+  width: 100%;
+  /* border: 2px solid orange; */
+}
+
+.testimonial-sub-box-main-heading-box-heading-style {
+  font-size: 40px;
+  color: #434644;
+  text-align: center;
+  font-weight: 900;
+}
+
+.testimonial-sub-box-main-heading-box p {
+  text-align: center;
+  margin-top: 10px;
+  color: #434644;
+}
+
+.testimonial-sub-box-testial-box-footer {
+  width: 100%;
+  /* border: 2px solid green; */
+}
+
+.frequently-asked-questions-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.frequently-asked-questions-sub-box {
+  width: 80%;
+  /* border: 2px solid orange; */
+  margin: auto;
+}
+
+.frequently-asked-questions-sub-box-heading-box-style {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.frequently-asked-questions-sub-box-sub-box-width-faq-footer-box {
+  width: 100%;
+  /* border: 2px solid orchid; */
+  display: flex;
+  margin-top: 20px;
+}
+
+.frequently-asked-questions-sub-box-sub-box-width-faq-footer-box-left {
+  width: 50%;
+  /* border: 2px solid green; */
+  padding-right: 20px;
+}
+
+.frequently-asked-questions-sub-box-sub-box-width-faq-footer-box-right {
+  width: 50%;
+  /* border: 2px solid rgb(0, 255, 0); */
+  padding-left: 20px;
+
+
+}
+
+.frequently-asked-questions-sub-box-sub-box-width-faq-footer-box-right img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#contact-number {
+  background-image: url("image/home-contact-bg.webp");
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contact-number-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.contact-number-sub-box {
+  width: 97%;
+  /* border: 2px solid orangered; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-number-sub-box-first-box {
+  width: 400px;
+  /* border: 2px solid purple; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-number-sub-box-first-box img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.contact-number-sub-box-first-box-h3-heading-style {
+  font-size: 22px;
+  color: white;
+  margin-top: 6px;
+}
+
+#footer {
+  background-image: url("image/footer-bg-2.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-main-box {
+  width: 90%;
+  /* border: 2px solid rgb(255, 0, 255); */
+  margin: auto;
+}
+
+.footer-sub-box {
+  width: 97%;
+  /* border: 2px solid grey; */
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-sub-box-first-cotent-box {
+  width: 300px;
+  /* border: 2px solid orangered; */
+}
+
+.footer-sub-box-first-cotent-box-h1-heading-style {
+  color: white;
+  font-size: 800;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.footer-sub-box-first-cotent-box-h3-heading-style {
+  font-size: 25px;
+  font-size: 800;
+  color: white;
+  margin-top: 30px;
+}
+
+.footer-sub-box-first-cotent-box {
+  color: white;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.we-accept {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 40px;
+}
+
+.we-accept-icon {
+  width: 100%;
+  /* border: 2px solid gold; */
+  margin-top: 10PX;
+}
+
+.we-accept-icon image {
+  width: 100%;
+}
+
+.footer-sub-box-first-cotent-box li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer-sub-box-first-cotent-box li a {
+  color: white;
+}
+
+.footer-sub-box-first-cotent-box li a:hover {
+  color: #000A69;
+}
+
+#footer-sub-box-first-cotent-box-width-adjust {
+  width: 180px;
+}
+
+#we-accept-adjust-margin {
+  margin-top: 30px;
+}
+
+#copy-right {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #000A69;
+}
+
+.copy-right-main-box {
+  width: 90%;
+  /* border: 2PX SOLID black; */
+  margin: auto;
+}
+
+.copy-right-sub-box {
+  width: 97%;
+  /* border: 2px solid violet; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-right-sub-box-left {
+  width: 50%;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-right-sub-box-right {
+  width: 40%;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-right-main-box-heading {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 0px;
+  font-weight: 200;
+}
+
+.copy-right-sub-box-right img {
+  margin-left: 10px;
+}
+
+.main-header-after-nav-bar-with-calculator-main-box {
+  width: 90%;
+  border: 2px solid green;
+  margin: auto;
+}
+
+.main-header-after-nav-bar-with-calculator-sub-box {
+  width: 80%;
+  border: 2px solid orange;
+  margin: auto;
+}
+
+#service-page-form-main-box-edit {
+  width: 90%;
+  border: 2px solid darkgreen;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgb(158, 255, 158);
+}
+
+#service-page-main-header-after-nav-bar-content-box-right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
+}
+
+#main-header-after-nav-bar-content-box-left-edit-new-style {
+  width: 60%;
+  padding-right: 10px;
+}
+
+#service-page-Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online {
+  background-image: url("image/about-priced-essay-writing.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+section#service-page-Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online p {
+  color: white;
+}
+
+section#service-page-Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-heading-box-heading-style {
+  color: white;
+}
+
+section#service-page-Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-left-heading-style {
+  color: white;
+}
+
+#service-page-simple-quick-our-writers-to-unlock-success {
+  background-image: url("image/quick-our-writer.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#service-page-simple-quick-our-writers-to-unlock-success p {
+  color: white;
+}
+
+section#service-page-simple-quick-our-writers-to-unlock-success .simple-quick-our-writers-to-unlock-success-sub-box-h3-heading-style {
+  color: white;
+}
+
+section#service-page-simple-quick-our-writers-to-unlock-success .simple-quick-our-writers-to-unlock-success-sub-box-h2-heading-style {
+  color: white;
+}
+
+section#service-page-simple-quick-our-writers-to-unlock-success .simple-quick-our-writers-to-unlock-success-main-box-main-heading-box-heading-style {
+  color: white;
+}
+
+#about-main-header-after-nav-bar {
+  background-image: url("image/about-page-main.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-main-header-after-nav-bar-main-box {
+  width: 90%;
+  border: 2px solid black;
+  margin: auto;
+}
+
+.about-main-header-after-nav-bar-sub-box {
+  width: 97%;
+  border: 2px solid orange;
+  margin: auto;
+}
+
+.about-main-header-after-nav-bar-sub-box-heading-box {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.about-main-header-after-nav-bar-sub-box-heading-box-heading-style {
+  text-align: center;
+  font-weight: 800;
+  color: #006b48;
+}
+
+.about-main-header-after-nav-bar-sub-box a {
+  width: 110px;
+  text-align: center;
+  padding: 10px 10px;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  color: white;
+  border: none;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.about-main-header-after-nav-bar-sub-box-btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.about-main-header-after-nav-bar-sub-box a:hover {
+  transform: scale(1.05);
+}
+
+#about-main-header-after-nav-bar-sub-box-bt-color-change {
+  background: transparent;
+  border: 2px solid #000A69;
+  color: black;
+  padding: 7px 10px !important;
+}
+#about-main-header-after-nav-bar-sub-box-bt-color-change:hover{
+  background-color: #000A69;
+  color: white;
+}
+
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-main-box {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box {
+  width: 97%;
+  /* border: 2px solid orange; */
+  margin: auto;
+}
+
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-main-heading-box {
+  width: 90%;
+  /* border: 2px solid rgb(190, 75, 75); */
+  margin: auto;
+}
+
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-main-heading-box-heading-style {
+  color: #323232;
+  text-align: center;
+  font-weight: 800;
+}
+
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-main-heading-box p {
+  text-align: center;
+  color: #323232;
+  margin-top: 20px;
+}
+
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box {
+  width: 100%;
+  /* border: 2px solid rgb(243, 150, 0); */
+  display: flex;
+  margin-top: 20px;
+}
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-left{
+  width: 50%;
+  /* border: 2px solid purple; */
+  padding: 0 10px;
+
+}
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-right{
+  width: 50%;
+  /* border: 2px solid rgb(255, 22, 255); */
+  padding: 0 10px;
+}
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-left-h2-heading-style{
+  font-size: 20px;
+  font-weight: 800;
+
+}
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-right ul{
+  padding-left: 10px;
+}
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-right ul li {
+  list-style: outside;
+}
+.best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-right ul li span{
+  font-weight: 600;
+  }
+  #order-page-header {
+    background-image: url(image/about-page-main.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding-bottom: 0px !important; */
+}
+
+.order-page-header-main-box {
+    width: 90%;
+    /* border: 2px solid black; */
+    margin: auto;
+}
+
+.order-page-header-sub-box {
+    width: 90%;
+    /* border: 2px solid rgb(192, 0, 0); */
+    margin: auto;
+}
+
+.order-page-header-sub-box-heading-box {
+    width: 50%;
+    margin: auto;
+
+}
+
+.order-page-header-sub-box-heading-box-heading-style {
+    text-align: center;
+    color: #323232;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.order-page-header-sub-box-heading-box p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.order-page-content-main-box {
+    width: 90%;
+    /* border: 2px solid black; */
+    margin: auto;
+}
+
+.order-page-content-sub-box {
+    width: 90%;
+    /* border: 2px solid rgb(117, 6, 6); */
+    margin: auto;
+    display: flex;
+}
+
+.order-page-content-sub-box-left {
+    width: 50%;
+    /* border: 2px solid orange; */
+    padding: 0px 10px;
+    padding-bottom: 20px;
+
+}
+
+.order-page-content-sub-box-right {
+    width: 50%;
+    /* border: 2px solid rgb(85, 55, 0); */
+    padding: 0px 10px;
+    padding-bottom: 20px;
+
+}
+
+.order-page-content-sub-box-left select {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #006b48;
+    outline: #006b48;
+}
+
+.order-page-content-sub-box-right select {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #006b48;
+    outline: #006b48;
+}
+
+.calculator-box {
+    width: 90%;
+    /* border: 2px solid  #323232; */
+    background-color: #006b48;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 67px;
+}
+
+.calculator-box-left {
+    width: 50%;
+    /* border: 2px solid orange; */
+    padding: 20px 10px;
+    padding-left: 50px;
+}
+
+.calculator-box-right {
+    width: 50%;
+    /* border: 2px solid rgb(134, 89, 5); */
+    padding: 20px 10px;
+}
+
+.calculator-box-left-heading-style {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: white;
+
+}
+
+.calculator-box-left p {
+    color: white;
+}
+
+.calculator-box-left p span {
+    margin-left: 5px;
+}
+
+.calculator-box-right-heading-style {
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 900;
+}
+
+.calculator-box-right-total-price {
+    width: 50%;
+    padding: 30px 10px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.calculator-box-right-total-price-heading-style {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.calculator-box-right-total-price-heading-h2-style {
+    text-align: center;
+    font-weight: 900;
+}
+
+#personal-detail {
+    padding-top: 0px;
+}
+
+.personal-detail-main-box {
+    width: 90%;
+    /* border: 2px solid black; */
+    margin: auto;
+}
+
+.personal-detail-sub-box {
+    width: 90%;
+    /* border: 2px solid rgb(2, 11, 139); */
+    margin: auto;
+}
+
+.personal-detail-sub-box-content-box {
+    width: 100%;
+    /* border: 2px solid palevioletred; */
+    display: flex;
+}
+
+.personal-detail-sub-box-content-box-left {
+    width: 50%;
+    /* border: 2px solid peru; */
+    padding: 10px 20px;
+}
+
+.personal-detail-sub-box-content-box-left form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #006b48;
+}
+.personal-detail-sub-box-content-box-left-check-box{
+    width: 100%;
+/* border: 2px solid brown; */
+margin-top: 20px;
+display: flex;
+}
+.personal-detail-sub-box-content-box-left-check-box form{
+    width: 100%;
+}
+.personal-detail-sub-box-content-box-left-check-box form input{
+    width: 5%;
+    margin-bottom: 0px;
+}
+.personal-detail-sub-box-content-box-left-btn{
+    width: 100%;
+margin-top: 20px;
+}
+.personal-detail-sub-box-content-box-left-btn a{
+width: 110px;
+    text-align: center;
+    padding: 10px 10px;
+    background: linear-gradient(0deg, #006b48, #03a28f);
+    color: white;
+    border: none;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.personal-detail-sub-box-content-box-left-btn a:hover{
+    transform: scale(1.1);
+}
+.personal-detail-sub-box-content-box-left form span{
+    margin-bottom: 20px !important;
+}
+.personal-detail-sub-box-content-box-left select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #006b48;
+outline: #006b48;
+}
+
+.personal-detail-sub-box-content-box-right {
+    width: 50%;
+    /* border: 2px solid rgb(46, 23, 0); */
+    padding: 10px 20px;
+
+}
+
+.personal-detail-sub-box-content-box-right form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #006b48;
+}
+.personal-detail-sub-box-content-box-right form span{
+    margin-bottom: 20px !important;
+}
+.personal-detail-sub-box-content-box-right select {
+    width: 100%;
+    padding: 10px;
+}
+#personal-detail-sub-box-content-box-left-email{
+    display: none;
+}
+.personal-heading-main-box{
+  width: 100%;
+  background: linear-gradient(0deg, #006b48, #03a28f);
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+.personal-heading-main-box-heading-style{
+text-align: center;
+font-weight: 800;
+color: white;
+font-size: 40px;
+}
+section#order-page-content {
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+
+.term-and-codition-content-section-main-box{
+  width: 90%;
+  /* border: 2px solid purple; */
+  margin: auto;
+}
+.term-and-codition-content-section-sub-box{
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: auto;
+}
+.term-and-codition-content-section-sub-box-heading-with-para-box{
+  width: 100%;
+  /* border: 2px solid peru; */
+
+}
+.term-and-codition-content-section-sub-box-heading-with-para-box-heading-style{
+  font-size: 30px;
+  color: #006b48;
+  font-weight: 800;
+}
+.Services-Offered{
+  width: 100%;
+  margin-top:30px;
+  /* border: 2px solid orangered; */
+}
+.Services-Offered-heading-style{
+  font-size: 30px;
+  font-weight: 800px;
+}
+#essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-para-box-add-margin-bottom{
+  margin-bottom: 10px;
+}
+.dropdown {
+  position: relative;
+  top: 0%;
+  /* left: 0; */
+  width: 7rem;
+  transform: translateY(0px);
+  opacity: 100;
+  /* pointer-events: none; */
+  /* transition: .5s; */
+}

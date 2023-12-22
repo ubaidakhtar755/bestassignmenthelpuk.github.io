@@ -1,0 +1,949 @@
+@media (max-width:1024px) {
+    .form-main-box {
+        width: 90%;
+        border: 2px solid darkgreen;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px rgb(158, 255, 158);
+    }
+    .main-header-after-nav-bar-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .main-header-after-nav-bar-content-box-right {
+        width: 38%;
+        padding-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-header-after-nav-bar-content-box-left {
+        width: 51%;
+    }
+    .main-header-after-nav-bar-content-box-left-icon-main-box {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header-after-nav-bar-content-box-left-icon-main-box {
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header-after-nav-bar-content-box-left-icon-main-box-left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .Hire-essay-our-future-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .Hire-essay-our-future-sub-box {
+        width: 100%;
+        margin: auto;
+        background: #15378b;
+        background-image: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    .Utilize-the-about-us-main-box-content-box {
+        width: 100%;
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .utilize-the-about-us-sub-box-heading-box-left {
+        width: 100%;
+        padding-left: 40px;
+    }
+    .utilize-the-about-us-sub-box-heading-box-right {
+        width: 100%;
+    }
+    .hire-essay-our-services-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .hire-essay-our-services-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .hire-essay-our-services-main-box-content-main-box {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    #prossising-image {
+        width: 650px;
+        position: absolute;
+        right: 0;
+        top: 165px;
+        z-index: 0;
+        display: none;
+    }
+    .simple-quick-order-process-to-unlock-success-main-box {
+        width: 100%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section-icon-box {
+        width: 204px;
+        /* border: 2px solid orchid; */
+        background: linear-gradient(0deg, #006b48, #03a28f);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20PX;
+        flex-direction: column;
+        padding: 10px 10px !important;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+    }
+    .reasonably-pricing-essay-writer-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .reasonably-pricing-essay-writer-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    #book-and-pen-png {
+        position: absolute;
+        left: -62px;
+        bottom: 0;
+        width: 250px;
+    }
+    .simple-quick-our-writers-to-unlock-success-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .simple-quick-our-writers-to-unlock-success-main-box-main-heading-box {
+        width: 90%;
+        margin: auto;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-right-main-writer-images {
+        width: 90%;
+        position: relative;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-right-heading-style {
+        position: absolute;
+        text-align: center;
+        top: 166px;
+        left: 150px;
+        color: white;
+    }
+    .frequently-asked-questions-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .contact-number-sub-box {
+        width: 97%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    .footer-sub-box {
+        width: 97%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    .best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-main-heading-box {
+        width: 95%;
+        margin: auto;
+    }
+    .best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-left {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-cotent-box-right {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .order-page-header-sub-box-heading-box {
+        width: 80%;
+        margin: auto;
+    }
+    .order-page-content-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+    }
+    .calculator-box {
+        width: 100%;
+        background-color: #006b48;
+        margin: 50px auto;
+        display: flex;
+    }
+    .personal-detail-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .essay-writing-priced-essay-writer-sub-box {
+        width: 97%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .essay-writing-priced-essay-writer-sub-box-right-box-content-box {
+        width: 300px;
+        background-color: #000A69;
+        position: relative;
+        padding: 10px 5px;
+        top: 0px;
+    }
+    .essay-writing-priced-essay-writer-sub-box-left-box {
+        width: 100%;
+        padding: 15px 0;
+    }
+    #essay-writing-priced-essay-writer-image-position-change {
+        position: absolute;
+        right: -170px;
+        top: 1px;
+        width: 1881px;
+        display: none;
+    }
+    .essay-writing-priced-essay-writer-sub-box-right-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .main-header-after-nav-bar-content-box-right {
+        width: 58%;
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-header-after-nav-bar-content-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+    }
+    .Utilize-the-about-us-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box-left {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section-icon-box {
+        width: 245px;
+        /* border: 2px solid orchid; */
+        background: linear-gradient(0deg, #006b48, #03a28f);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20PX;
+        flex-direction: column;
+        padding: 10px 10px !important;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+    }
+    .counter-sub-box {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    #book-and-pen-png {
+        position: absolute;
+        left: -62px;
+        bottom: 0;
+        width: 178px;
+    } 
+    .simple-quick-order-process-to-unlock-success-heading-box-heading-style {
+        font-size: 40px;
+        text-align: center;
+        color: #434644;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box {
+        width: 97%;
+        margin: auto;
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-left {
+        width: 100%;
+        position: relative;
+        padding-top: 0px;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-h3-heading-style {
+        color: #00247D;
+        margin-bottom: 7px;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    #rotate-image {
+        width: 80%;
+        animation: animate 20s linear infinite;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-right-main-writer-images {
+        width: 90%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-right-heading-style {
+        position: absolute;
+        text-align: center;
+        top: 198px !important;
+        left: 241px;
+        color: white;
+    }
+    .frequently-asked-questions-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .copy-right-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .copy-right-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .copy-right-sub-box-left {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .copy-right-sub-box-right {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .best-assignment-help-uk-see-how-our-essay-writing-priced-essay-writer-sub-box-main-heading-box {
+        width: 100%;
+        margin: auto;
+    }
+    .order-page-content-main-box {
+        width: 100%;
+        border: 2px solid black;
+        margin: auto;
+    }
+    .calculator-box-right-heading-style {
+        font-size: 30px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 900;
+    }
+    .calculator-box-left {
+        width: 50%;
+        padding: 20px 10px;
+        padding-left: 30px;
+    }
+    .personal-detail-main-box {
+        width: 100%;
+        border: 2px solid black;
+        margin: auto;
+    }
+    .personal-detail-sub-box-content-box-left form span {
+        margin-bottom: 20px !important;
+        font-size: 15px;
+    }
+    .term-and-codition-content-section-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .term-and-codition-content-section-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .essay-writing-priced-essay-writer-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width:425px) {
+    .main-header-after-nav-bar-content-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header-after-nav-bar-content-box-left {
+        width: 100%;
+    }
+    .main-header-after-nav-bar-content-box-right {
+        width: 100%;
+        padding-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-two {
+        width: 100%;
+        padding: 17px 3px;
+    }
+    .main-header-after-nav-bar-content-box-right {
+        width: 100%;
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-main-box {
+        width: 90%;
+        border: 2px solid darkgreen;
+        background-color: white;
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px rgb(158, 255, 158);
+    }
+    .main-header-after-nav-bar-content-box-left {
+        width: 100%;
+        padding-left: 20px;
+    }
+    .utilize-the-about-us-sub-box-heading-box-left {
+        width: 100%;
+        padding-left: 10px;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-heading-box-heading-style {
+        text-align: center;
+        font-size: 30px;
+        color: #434644;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-left {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-right {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-content-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .hire-essay-our-services-sub-box-heading-style {
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+    }
+    .utilize-the-about-us-sub-box-heading-box-right img {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .utilize-the-about-us-sub-box-heading-box-heading-style {
+        font-size: 40px;
+        color: #434644;
+        text-align: center;
+    }
+    .simple-quick-order-process-to-unlock-success-heading-box-heading-style {
+        font-size: 30px;
+        color: #434644;
+        text-align: center;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    .simple-quick-order-process-to-unlock-success-heading-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    #book-and-pen-png {
+        position: absolute;
+        left: -62px;
+        bottom: 0;
+        width: 178px;
+        display: none;
+    }
+    #book-and-watch-png {
+        position: absolute;
+        right: -45px;
+        bottom: 0;
+        width: 250px;
+        display: none;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-right {
+        width: 100%;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        display: none;
+    }
+    .simple-quick-our-writers-to-unlock-success-main-box-main-heading-box {
+        width: 100%;
+        margin: auto;
+    }
+    .simple-quick-our-writers-to-unlock-success-main-box-main-heading-box-heading-style {
+        font-size: 30px;
+        text-align: center;
+        color: #434644;
+        margin-bottom: 10px;
+    }
+    #image-postion-absulote {
+        position: absolute;
+        left: 269px;
+        bottom: -26px;
+        display: none;
+        z-index: 0;
+    }
+    .frequently-asked-questions-sub-box-sub-box-width-faq-footer-box {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .frequently-asked-questions-sub-box-sub-box-width-faq-footer-box-left {
+        width: 100%;
+        padding-right: 0px;
+    }
+    .frequently-asked-questions-sub-box-sub-box-width-faq-footer-box-right {
+        width: 100%;
+        padding-left: 20px;
+    }
+    .contact-number-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .footer-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .footer-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    .footer-sub-box-first-cotent-box {
+        width: 100% !important;
+        padding-left: 10px !important;
+    }
+    .footer-sub-box-first-cotent-box-h3-heading-style {
+        font-size: 25px;
+        font-size: 800;
+        color: white;
+        margin-top: 0px;
+    }
+    .copy-right-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .copy-right-sub-box-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .copy-right-sub-box-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .order-page-header-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .order-page-header-sub-box {
+        width: 100%;
+        margin: auto;
+    }
+    .order-page-content-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .order-page-content-sub-box-left {
+        width: 100%;
+        padding: 0px 10px;
+        padding-bottom: 20px;
+    }
+    .order-page-content-sub-box-right {
+        width: 100%;
+        padding: 0px 10px;
+        padding-bottom: 20px;
+    }
+    .calculator-box {
+        width: 100%;
+        background-color: #006b48;
+        margin: 50px auto;
+        flex-direction: column;
+        display: flex;
+    }
+    .calculator-box-left {
+        width: 100%;
+        padding: 20px 10px;
+        padding-left: 30px;
+    }
+    .calculator-box-right {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .personal-detail-sub-box-content-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .personal-detail-sub-box-content-box-left {
+        width: 100%;
+        padding: 10px 10px;
+    }
+    .personal-detail-sub-box-content-box-right {
+        width: 100%;
+        padding: 10px 20px;
+        display: none;
+    }
+    #personal-detail-sub-box-content-box-left-email{
+        display: block;
+    }
+    .order-page-header-sub-box-heading-box-heading-style {
+        text-align: center;
+        color: #323232;
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .essay-writing-priced-essay-writer-sub-box-right-box {
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    display: block;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box {
+    width: 100%;
+    background-color: #000A69;
+    position: relative;
+    padding: 10px 5px;
+    top: 0px;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-icon-box i {
+    font-size: 30px;
+    color: white;
+}
+.essay-writing-priced-essay-writer-sub-box-right-box-content-box-icon-with-para-para-box-h3-heading-style {
+    margin-bottom: 0px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}
+.essay-writing-priced-essay-writer-main-box {
+    width: 100%;
+    margin: auto;
+}
+.essay-writing-priced-essay-writer-sub-box-left-box {
+    width: 100%;
+    padding: 15px 10px;
+}
+}
+
+@media (max-width:375px) {
+    .contact-number-sub-box-first-box-h3-heading-style {
+        font-size: 20px;
+        color: white;
+        margin-top: 6px;
+    }
+}
+
+@media (max-width:430px) {
+    .container-two {
+        width: 100%;
+        padding: 30px 10px;
+        border: 2px solid black;
+    }
+    .main-header-after-nav-bar-content-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header-after-nav-bar-content-box-left {
+        width: 100%;
+    }
+    .main-header-after-nav-bar-content-box-right {
+        width: 100%;
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .Hire-essay-our-future-sub-box-contet {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    .utilize-the-about-us-sub-box-heading-box-heading-style {
+        font-size: 40px;
+        color: #434644;
+        text-align: center;
+    }
+    .utilize-the-about-us-sub-box-heading-box-left {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .utilize-the-about-us-sub-box-heading-box-right {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .hire-essay-our-services-sub-box-heading-style {
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-content-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-left {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-right {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .simple-quick-order-process-to-unlock-success-heading-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box-left {
+        width: 100%;
+        padding: 0px 10px;
+        margin-bottom: 30px;
+    }
+    .simple-quick-order-process-to-unlock-success-sub-box-right-service-content-box-with-icon-and-para-upper-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 20px 0;
+    }
+    #book-and-pen-png {
+        position: absolute;
+        left: -62px;
+        bottom: 0;
+        width: 178px;
+        display: none;
+    }
+    #book-and-watch-png {
+        position: absolute;
+        right: -45px;
+        bottom: 0;
+        width: 250px;
+        display: none;
+    }
+    .simple-quick-our-writers-to-unlock-success-main-box-main-heading-box {
+        width: 100%;
+        margin: auto;
+    }
+    .simple-quick-our-writers-to-unlock-success-main-box-main-heading-box-heading-style {
+        font-size: 30px;
+        text-align: center;
+        color: #434644;
+        margin-bottom: 10px;
+    }
+    .simple-quick-our-writers-to-unlock-success-sub-box-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        display: none;
+    }
+    .frequently-asked-questions-sub-box-heading-box-style {
+        font-size: 30px;
+        text-align: center;
+    }
+    .frequently-asked-questions-sub-box-sub-box-width-faq-footer-box {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .frequently-asked-questions-sub-box-sub-box-width-faq-footer-box-left {
+        width: 100%;
+        padding-right: 0px;
+    }
+    .frequently-asked-questions-sub-box-sub-box-width-faq-footer-box-right {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .footer-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+    .footer-main-box {
+        width: 100%;
+        margin: auto;
+    }
+    .footer-sub-box-first-cotent-box {
+        width: 100% !important;
+       padding-left: 10px;
+    }
+    .footer-sub-box-first-cotent-box-h3-heading-style {
+        font-size: 25px;
+        font-size: 800;
+        color: white;
+        margin-top: 0px;
+    }
+    .copy-right-sub-box {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px 0px;
+    }
+    .copy-right-sub-box-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .copy-right-sub-box-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .simple-quick-order-process-to-unlock-success-heading-box-heading-style {
+        font-size: 30px;
+        text-align: center;
+        color: #434644;
+    }
+    .Three-convincing-reasons-to-utilize-the-services-of-an-essay-writer-online-sub-box-heading-box-heading-style {
+        text-align: center;
+        font-size: 30px;
+        color: #434644;
+        font-weight: 900;
+    }
+}
